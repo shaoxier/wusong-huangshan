@@ -11,8 +11,8 @@
     <!-- 这是送给朋友的东西，不想被搜索引擎收录：有网址的人才打得开 -->
     <meta name="robots" content="noindex, nofollow" />
     <title>雾凇黄山</title>
-    <script type="module" crossorigin src="./assets/index-Cy09fLo7.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BXLiufxA.css">
+    <script type="module" crossorigin src="./assets/index-Drb5AS-0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B5Q-eCqv.css">
   </head>
   <body>
     <script>
@@ -62,6 +62,8 @@
       <p id="step-now"></p>
     </div>
     <button id="stamp-btn" type="button" hidden>盖章</button>
+    <!-- 走到景点介绍牌跟前才出现：上面一行小字是哪一处，点一下摊开那张介绍（见 src/boards.js）。要写在「盖章」后面，样式里靠这个先后来排位置 -->
+    <button id="read-btn" type="button" hidden><small id="read-name"></small><b>介绍</b></button>
     <div id="toast"></div>
     <div id="meter" hidden></div>
     <div id="flash"></div>
@@ -75,6 +77,21 @@
         <div class="row">
           <button id="postcard-open" type="button" class="primary" hidden>看明信片</button>
           <button id="journal-close" type="button">合上</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="board-card" class="sheet hidden">
+      <div class="page note">
+        <!-- 疯狗小队在这块牌子上的那只狗，贴在纸的右上角；下面 board-quip 是它插的一句嘴（见 src/cast.js 的 BOARD_NOTES） -->
+        <img id="board-dog" alt="" draggable="false" hidden />
+        <p class="kicker">景点介绍</p>
+        <h2 id="board-title"></h2>
+        <p id="board-sub"></p>
+        <div id="board-text"></div>
+        <p id="board-quip" hidden></p>
+        <div class="row">
+          <button id="board-close" type="button">合上</button>
         </div>
       </div>
     </div>
