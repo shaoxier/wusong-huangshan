@@ -11,8 +11,8 @@
     <!-- 这是送给朋友的东西，不想被搜索引擎收录：有网址的人才打得开 -->
     <meta name="robots" content="noindex, nofollow" />
     <title>雾凇黄山</title>
-    <script type="module" crossorigin src="./assets/index-CaNVMJMy.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C0Nm9R3k.css">
+    <script type="module" crossorigin src="./assets/index-Cy09fLo7.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BXLiufxA.css">
   </head>
   <body>
     <script>
@@ -37,6 +37,8 @@
     <div id="tools">
       <button id="weather-btn" type="button"><small>天气</small><b id="weather-name">晴朗</b></button>
       <button id="sound-btn" type="button"><small>声音</small><b id="sound-state">开</b></button>
+      <!-- 只有手机上才有：屏幕小，「天气」「声音」平时收在这个「⋯」里，点一下才展开（见 style.css 最后几段） -->
+      <button id="more-btn" type="button" aria-label="更多"><b>⋯</b></button>
       <button id="journal-btn" type="button">手账<span id="journal-count"></span></button>
       <button id="photo-btn" type="button">拍照</button>
     </div>
@@ -103,7 +105,8 @@
           <li>移动鼠标看四周，<b>Esc</b> 放开鼠标</li>
           <li>按一下<b>空格</b>会自己沿路往前走，再按一下停下</li>
         </ul>
-        <p class="sub">每到一个景点，在小铺的柜台前盖一个章；到了山顶，带走一张明信片<br />右上角可以换天气、开关声音</p>
+        <p class="sub">每到一个景点，在小铺的柜台前盖一个章；到了山顶，带走一张明信片<br /><span class="when-roomy">右上角可以换天气、开关声音</span><span class="when-tight">点右上角的「⋯」可以换天气、开关声音</span></p>
+        <p class="turn-hint">把手机横过来拿，画面更宽<small>（转不过来的话，看看手机是不是锁了竖屏）</small></p>
         <button id="resume-btn" type="button" hidden>接着上次走</button>
         <button id="start-btn" type="button" disabled>正在准备山路…</button>
       </div>
